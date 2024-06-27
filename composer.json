@@ -1,0 +1,57 @@
+{
+    "name": "otajonov/televel",
+    "description": "A highly customizable Laravel library for managing Telegram bots",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "telegram bot laravel",
+        "laravel telegram bot",
+        "telegram bot laravel library",
+        "laravel telegram",
+        "laravel telegram bot package",
+        "laravel telegram bot televel",
+        "televel"
+      ],
+    "authors": [
+        {
+            "name": "Elbek Shukurullayev",
+            "homepage": "https://vermino.uz"
+        },
+        {
+            "name": "Ro'zmat Otajonov",
+            "homepage": "https://otajonov.dev"
+        }
+    ],
+    "homepage": "https://github.com/Otajonov/televel",
+    "support": {
+      "issues": "https://github.com/Otajonov/televel/issues",
+      "source": "https://github.com/Otajonov/laravel",
+      "docs": "https://televel.gitbook.io"
+    },
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.8",
+        "laravel/framework": "^11.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Televel\\Bot\\": "src/Bot/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Televel\\Bot\\TelevelServiceProvider"
+            ],
+            "aliases": {
+                "Televel": "Televel\\Bot\\Facades\\Televel"
+            },
+            "branch-alias": {
+                "dev-main": "1.x-dev"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "version": "1.0"
+}
