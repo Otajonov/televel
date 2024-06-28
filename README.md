@@ -13,15 +13,22 @@ Installation
 
 To install Televel, follow these steps:
 
-1.  Install the package via Composer:
+1. Install the package via Composer:
 
     composer require otajonov/televel
 
-2.  Publish the package configuration and Provider files:
+2. Publish the package configuration and Provider files:
 
     php artisan vendor:publish --provider="Televel\TelevelServiceProvider" --tag="config"
 
 This will publish the configuration file to `config/televel.php`, where you can configure your Telegram bots.
+
+3. Make sure your APP_URL in `.env` file is set correct, and is `https`.
+   
+4. Run `php artisan televel:setup` and provide your Bot Token
+   
+5. Congrats. Your Bot should be already running. /start it and happy coding!
+
 
 Commands
 --------
