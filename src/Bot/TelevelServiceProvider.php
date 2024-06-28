@@ -23,6 +23,7 @@ class TelevelServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Commands\SetupTelevelBot::class,
+                Commands\ResetWebhook::class,
                 Commands\ListTelevelBots::class,
                 Commands\RemoveTelevelBot::class,
             ]);

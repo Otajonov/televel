@@ -18,11 +18,17 @@ class ListTelevelBots extends Command
             return;
         }
 
+        $this->line('');
+        $this->line('<fg=green;options=bold>Configured Bots:</>');
+        $this->line('');
+
         foreach ($config as $bot => $settings) {
-            $this->info("Bot: {$bot}");
-            $this->info("Token: {$settings['token']}");
-            $this->info("Webhook URL: {$settings['webhook_url']}");
-            $this->info('---');
+            $this->line("<fg=green>{$bot}</>:");
+            $this->line("  Token: <fg=cyan>{$settings['token']}</>");
+            $this->line("  Webhook URL: <fg=cyan>{$settings['webhook_url']}</>");
+            $this->line('');
         }
+
+        $this->line('');
     }
 }

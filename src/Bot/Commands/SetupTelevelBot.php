@@ -43,6 +43,8 @@ class SetupTelevelBot extends Command
         if (!$response['ok']) {
             $this->error("Failed to set webhook for bot '{$bot}'. Response: " . json_encode($response));
             return;
+        } else {
+            $this->info("Webhook for bot '{$bot}' set successfully.");
         }
 
         // Update the config
