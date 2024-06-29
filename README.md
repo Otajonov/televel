@@ -97,7 +97,7 @@ You can further customize your Telegram bot by extending the Televel class and a
         public function sendMessage($chatId, $message)
         {
             // Implement your custom logic here to send messages via Telegram API
-            // Example: return $this->sendRequest('sendMessage', ['chat_id' => $chatId, 'text' => $message]);
+            // Example: return $this->post('sendMessage', ['chat_id' => $chatId, 'text' => $message]);
         }
     }
     
